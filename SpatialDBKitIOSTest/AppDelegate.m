@@ -14,8 +14,8 @@
 
 
 #import "AppDelegate.h"
-#import "FMDatabase+SpatialDBKit.h"
-#import <ShapeKit/ShapeKit.h>
+#import "SpatialDatabase.h"
+#import "ShapeKit.h"
 
 @implementation AppDelegate
 
@@ -26,27 +26,53 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    NSString *sqliteVersion = [FMDatabase sqliteLibVersion];
+    NSString *sqliteVersion = [SpatialDatabase sqliteLibVersion];
     NSLog(@"sqlite version: %@", sqliteVersion);
     
-    NSString *spatialiteVersion = [FMDatabase spatialiteLibVersion];
+    NSString *spatialiteVersion = [SpatialDatabase spatialiteLibVersion];
     NSLog(@"spatialite version: %@", spatialiteVersion);
     
-    spatialite_init(TRUE);
-    FMDatabase *db = [FMDatabase databaseWithPath: [[NSBundle mainBundle] pathForResource:@"Assets/test-2.3" ofType:@"sqlite"]] ;
+    // test spatialite AsText function -> ShapeKit object import
+    SpatialDatabase *db = [SpatialDatabase databaseWithPath: [[NSBundle mainBundle] pathForResource:@"Assets/test-2.3" ofType:@"sqlite"]] ;
     [db open];
-    FMResultSet *rs = [db executeQuery:@"select AsText(geometry) AS text FROM Regions"];
+    FMResultSet *rs = [db executeQuery:@"select AsText(geometry) AS text FROM Regions WHERE PK_UID = 106"];
     while ([rs next])
     {
         id object = [rs resultDict];
-        NSLog(@"%@", object);
         
-        // unpack the WKT to a cocoa object using ShapeKit
-        object = [[ShapeKitFactory defaultFactory] geometryWithWKT: [object objectForKey:@"text"]];
         NSLog(@"%@", object);
     }
+
+    // test spatialite fetch function -> ShapeKit WKB object import
+    SpatialDatabase *db3 = [SpatialDatabase databaseWithPath: [[NSBundle mainBundle] pathForResource:@"Assets/test-2.3" ofType:@"sqlite"]] ;
+    [db3 open];
+    FMResultSet *rs3 = [db executeQuery:@"select geometry FROM Regions WHERE PK_UID = 106"];
+    ShapeKitGeometry* geom = nil;
+    while ([rs3 next])
+    {
+        NSDictionary * object = [rs3 resultDict];
+        if ((!geom) && ([object objectForKey:@"geometry"]))
+            geom=[object objectForKey:@"geometry"]; // get the route geom for future use
+        
+        NSLog(@"%@", object);
+    }
+
+    // test ShapeKit topology functions
+    NSLog(@"Route boundary: %@", geom.boundary);
+    NSLog(@"Route cascaded union : %@", [(ShapeKitMultiPolygon *)geom cascadedUnion]);
     
-    spatialite_cleanup();
+    // test VirtualNetwork module for Dijkstra-based routing
+    SpatialDatabase *db2 = [SpatialDatabase databaseWithPath: [[NSBundle mainBundle] pathForResource:@"Assets/test-network-2.3" ofType:@"sqlite"]] ;
+    [db2 open];
+    FMResultSet *rs2 = [db2 executeQuery:@"SELECT * AS WKT_geometry  \
+                        FROM Roads_net \
+                        WHERE NodeFrom = 1 AND NodeTo = 512;"];
+    while ([rs2 next])
+    {
+        id object = [rs2 resultDict];
+        
+        NSLog(@"%@", object);
+    }
     
     
     return YES;

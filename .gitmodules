@@ -1,0 +1,3 @@
+[submodule "Frameworks/ShapeKit"]
+	path = Frameworks/ShapeKit
+	url = https://github.com/andreacremaschi/ShapeKit.git

@@ -1,8 +1,8 @@
 //
-//  FMDatabase+SpatialDBKit.h
-//  shapekitpodtets
+//  SpatialDatabase.h
+//  SpatialDBKit
 //
-//  Created by Andrea Cremaschi on 08/03/13.
+//  Created by Andrea Cremaschi on 11/03/13.
 //
 // * This is free software; you can redistribute and/or modify it under
 // the terms of the Mozilla Public License Version 1.1
@@ -12,9 +12,11 @@
 // the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
 // See the LICENSE file for more information.
 
-#import "FMDatabase.h"
 
-@interface FMDatabase (SpatialDBKit)
+#import <UIKit/UIKit.h>
+#import <FMDB/FMDatabase.h>
+
+@interface SpatialDatabase : FMDatabase
 + (NSString*)spatialiteLibVersion;
 
 @end

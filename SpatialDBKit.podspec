@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'spatialite'
   s.dependency 'FMDB'
-  s.dependency 'ShapeKit'
+#  s.dependency 'ShapeKit', :git => 'https://github.com/andreacremaschi/ShapeKit.git'
 
 # this config will hijack FMDB includes (#include "sqlite3.h"), so that it will include the header defined by spatialite
 # this way FMDB will become a wrapper of spatialite's embedded sqlite code!! (ugh)
