@@ -15,7 +15,7 @@
 
 #import "AppDelegate.h"
 #import "SpatialDatabase.h"
-#import "ShapeKit.h"
+#import <ShapeKit/ShapeKit.h>
 
 @implementation AppDelegate
 

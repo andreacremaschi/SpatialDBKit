@@ -1,3 +1,3 @@
 platform :ios
-pod 'SpatialDBKit', :local => './'
-pod 'spatialite'
+pod 'SpatialDBKit', :path => './'
+# pod 'spatialite'

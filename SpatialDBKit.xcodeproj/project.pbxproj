@@ -21,35 +21,14 @@
 		CD1CC8B316EB3CB7001CBC10 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD1CC8B016EB3CB7001CBC10 /* Default-568h@2x.png */; };
 		CD1CC8B416EB3CB7001CBC10 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CD1CC8B116EB3CB7001CBC10 /* Default.png */; };
 		CD1CC8B516EB3CB7001CBC10 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD1CC8B216EB3CB7001CBC10 /* Default@2x.png */; };
-		CD908D8316EF913F008F2C27 /* libShapeKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD908D8016EF8917008F2C27 /* libShapeKit.a */; };
 		CD908D8516EF9152008F2C27 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD908D8416EF9152008F2C27 /* CoreLocation.framework */; };
 		CDB7462D16EB37D2001F9C92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB7462C16EB37D2001F9C92 /* UIKit.framework */; };
 		CDB7462F16EB37D2001F9C92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB7462E16EB37D2001F9C92 /* Foundation.framework */; };
 		CDB7463116EB37D2001F9C92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB7463016EB37D2001F9C92 /* CoreGraphics.framework */; };
-		CDC3D30316EDCD0900287FC4 /* SpatialDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC3D30216EDCD0900287FC4 /* SpatialDatabase.m */; };
-		CDC3D30416EDCD0900287FC4 /* SpatialDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC3D30216EDCD0900287FC4 /* SpatialDatabase.m */; };
-		CDC3D30B16EDDDE400287FC4 /* FMResultSet+SpatialDBKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC3D30A16EDDDE400287FC4 /* FMResultSet+SpatialDBKit.m */; };
-		CDC3D30C16EDDDE400287FC4 /* FMResultSet+SpatialDBKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC3D30A16EDDDE400287FC4 /* FMResultSet+SpatialDBKit.m */; };
 		CDC78F6D16EB488500965B41 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = CDC78F6C16EB488500965B41 /* Assets */; };
 		CDC78F6E16EB488500965B41 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = CDC78F6C16EB488500965B41 /* Assets */; };
+		CDFFB9CD179552AE0068ABA1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFFB9CC179552AE0068ABA1 /* libz.dylib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CD908D7F16EF8917008F2C27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD908D7B16EF8916008F2C27 /* ShapeKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CDA9A7671667C87A0008D661;
-			remoteInfo = ShapeKit;
-		};
-		CD908D8116EF892B008F2C27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD908D7B16EF8916008F2C27 /* ShapeKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CDA9A7661667C87A0008D661;
-			remoteInfo = ShapeKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9AA62964F0FD4FEAAB38E2BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +55,6 @@
 		CD1CC8B216EB3CB7001CBC10 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "SpatialDBKitIOSTest/Default@2x.png"; sourceTree = SOURCE_ROOT; };
 		CD1CC8BA16EB3ECA001CBC10 /* SpatialDBKitIOSTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SpatialDBKitIOSTest-Info.plist"; path = "SpatialDBKitIOSTest/SpatialDBKitIOSTest-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CD1CC8BB16EB3ECA001CBC10 /* SpatialDBKitIOSTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SpatialDBKitIOSTest-Prefix.pch"; path = "SpatialDBKitIOSTest/SpatialDBKitIOSTest-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		CD908D7B16EF8916008F2C27 /* ShapeKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShapeKit.xcodeproj; path = Frameworks/ShapeKit/ShapeKit.xcodeproj; sourceTree = "<group>"; };
 		CD908D8416EF9152008F2C27 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CDB7462916EB37D2001F9C92 /* SpatialDBKitIOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialDBKitIOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB7462C16EB37D2001F9C92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -87,6 +65,7 @@
 		CDC3D30916EDDDE400287FC4 /* FMResultSet+SpatialDBKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FMResultSet+SpatialDBKit.h"; path = "SpatialDBKit/FMResultSet+SpatialDBKit.h"; sourceTree = "<group>"; };
 		CDC3D30A16EDDDE400287FC4 /* FMResultSet+SpatialDBKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FMResultSet+SpatialDBKit.m"; path = "SpatialDBKit/FMResultSet+SpatialDBKit.m"; sourceTree = "<group>"; };
 		CDC78F6C16EB488500965B41 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		CDFFB9CC179552AE0068ABA1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E2E886BB35FA487DA9DC7FBE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -104,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFFB9CD179552AE0068ABA1 /* libz.dylib in Frameworks */,
 				CD908D8516EF9152008F2C27 /* CoreLocation.framework in Frameworks */,
-				CD908D8316EF913F008F2C27 /* libShapeKit.a in Frameworks */,
 				CDB7462D16EB37D2001F9C92 /* UIKit.framework in Frameworks */,
 				CDB7462F16EB37D2001F9C92 /* Foundation.framework in Frameworks */,
 				CDB7463116EB37D2001F9C92 /* CoreGraphics.framework in Frameworks */,
@@ -171,21 +150,13 @@
 			name = SpatialDBKit;
 			sourceTree = "<group>";
 		};
-		CD908D7C16EF8916008F2C27 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CD908D8016EF8917008F2C27 /* libShapeKit.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CDB7462016EB37D2001F9C92 = {
 			isa = PBXGroup;
 			children = (
+				CDFFB9CC179552AE0068ABA1 /* libz.dylib */,
 				CD908D8416EF9152008F2C27 /* CoreLocation.framework */,
 				CD1CC8A316EB3C0D001CBC10 /* SpatialDBKit */,
 				CDC78F6C16EB488500965B41 /* Assets */,
-				CD908D7B16EF8916008F2C27 /* ShapeKit.xcodeproj */,
 				CDB7463216EB37D2001F9C92 /* SpatialDBKitIOSTest */,
 				CD1CC88B16EB3B35001CBC10 /* SpatialDBKitOSXTest */,
 				CDB7462A16EB37D2001F9C92 /* Products */,
@@ -273,7 +244,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				CD908D8216EF892B008F2C27 /* PBXTargetDependency */,
 			);
 			name = SpatialDBKitIOSTest;
 			productName = SpatialDBKit;
@@ -299,12 +269,6 @@
 			mainGroup = CDB7462016EB37D2001F9C92;
 			productRefGroup = CDB7462A16EB37D2001F9C92 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CD908D7C16EF8916008F2C27 /* Products */;
-					ProjectRef = CD908D7B16EF8916008F2C27 /* ShapeKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CDB7462816EB37D2001F9C92 /* SpatialDBKitIOSTest */,
@@ -312,16 +276,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CD908D8016EF8917008F2C27 /* libShapeKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libShapeKit.a;
-			remoteRef = CD908D7F16EF8917008F2C27 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CD1CC88216EB3B34001CBC10 /* Resources */ = {
@@ -373,8 +327,6 @@
 			files = (
 				CD1CC89216EB3B35001CBC10 /* main.m in Sources */,
 				CD1CC89916EB3B35001CBC10 /* AppDelegate.m in Sources */,
-				CDC3D30416EDCD0900287FC4 /* SpatialDatabase.m in Sources */,
-				CDC3D30C16EDDDE400287FC4 /* FMResultSet+SpatialDBKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,20 +336,10 @@
 			files = (
 				CD1CC8A616EB3C87001CBC10 /* AppDelegate.m in Sources */,
 				CD1CC8AE16EB3C9C001CBC10 /* main.m in Sources */,
-				CDC3D30316EDCD0900287FC4 /* SpatialDatabase.m in Sources */,
-				CDC3D30B16EDDDE400287FC4 /* FMResultSet+SpatialDBKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CD908D8216EF892B008F2C27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ShapeKit;
-			targetProxy = CD908D8116EF892B008F2C27 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CD1CC88E16EB3B35001CBC10 /* InfoPlist.strings */ = {
@@ -550,13 +492,13 @@
 					"${PODS_ROOT}/geos/include",
 					"${PODS_ROOT}/geos/capi",
 					"${PODS_ROOT}/spatialite/headers",
+					"${PODS_ROOT}/Headers",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SpatialDBKitIOSTest/SpatialDBKitIOSTest-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lcharset",
 					"-liconv",
-					"-lsqlite3",
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -578,13 +520,13 @@
 					"${PODS_ROOT}/geos/include",
 					"${PODS_ROOT}/geos/capi",
 					"${PODS_ROOT}/spatialite/headers",
+					"${PODS_ROOT}/Headers",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SpatialDBKitIOSTest/SpatialDBKitIOSTest-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lcharset",
 					"-liconv",
-					"-lsqlite3",
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -15,8 +15,9 @@
 
 #import "SpatialDatabase.h"
 #import <objc/runtime.h>
-#import <FMDB/FMResultSet.h>
+#import "FMResultSet.h"
 #import "FMResultSet+SpatialDBKit.h"
+#import "FMDatabase.h"
 
 @interface FMResultSet (MyCategory)
 - (id)objectForColumnIndex:(int)columnIdx;

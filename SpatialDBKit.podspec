@@ -12,12 +12,18 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.6"
 
   s.dependency 'spatialite'
-  s.dependency 'FMDB'
-#  s.dependency 'ShapeKit', :git => 'https://github.com/andreacremaschi/ShapeKit.git'
+  # s.dependency 'FMDB/common'
+  s.dependency 'ShapeKit'  #, :git => 'https://github.com/andreacremaschi/ShapeKit.git'
+
+  s.source_files = "SpatialDBKit/*.{h,m}",
+		   "fmdb/src/FM*.{h,m}"
+  s.exclude_files = 'fmdb/src/fmdb.m'
+
+  s.public_header_files = 'fmdb/src/FM*.h', 'SpatialDBKit/*.h'
 
 # this config will hijack FMDB includes (#include "sqlite3.h"), so that it will include the header defined by spatialite
 # this way FMDB will become a wrapper of spatialite's embedded sqlite code!! (ugh)
 # TODO: -lsqlite3 Linker Flag, defined by FMDB pod, should be removed. 
-  s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '${PODS_ROOT}/spatialite/headers/spatialite' }
+#  s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '${PODS_ROOT}/spatialite/headers/spatialite' }
 
 end
