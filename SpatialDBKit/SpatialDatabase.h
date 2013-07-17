@@ -14,7 +14,7 @@
 
 
 #import <UIKit/UIKit.h>
-#import <SpatialDBKit/FMDatabase.h>
+#import <FMDB/FMDatabase.h>
 
 @interface SpatialDatabase : FMDatabase
 + (NSString*)spatialiteLibVersion;
