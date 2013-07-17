@@ -63,4 +63,4 @@ Check [spatialite SQL functions reference list](http://www.gaia-gis.it/gaia-sins
  * [SQLite](http://www.sqlite.org/copyright.html) has been dedicated to the public domain by the authors (thanks!).
  * Its Objective-C wrapper, [FMDB](https://github.com/ccgus/fmdb) by Gus Mueller, is under the MIT License.
 
-**License notice: Be aware that LGPL v2.1 (GEOS license) and Apple Store compatibility is at least controversial** ([Ragi Burhum's blog post](http://blog.burhum.com/post/38236943467/your-lgpl-license-is-completely-destroying-ios-adoption) explains why - I join his appeal to open up the license, anyway).
+**License note: Be aware that LGPL v2.1 (GEOS license) and Apple Store compatibility is at least controversial** ([Ragi Burhum's blog post](http://blog.burhum.com/post/38236943467/your-lgpl-license-is-completely-destroying-ios-adoption) explains why - I join his appeal to open up the license, anyway).
