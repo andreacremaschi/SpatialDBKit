@@ -8,8 +8,8 @@
 
 #import "FMResultSet+SpatialDBKit.h"
 #import <ShapeKit/ShapeKit.h>
-#import "FMDatabase.h"
-#import "../Pods/spatialite/src/headers/spatialite/gaiageo.h"
+#import <FMDB/FMDatabase.h>
+#import <spatialite/gaiageo.h>
 
 @implementation FMResultSet (SpatialDBKit)
 
