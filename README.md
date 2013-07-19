@@ -2,7 +2,7 @@ SpatialDBKit
 ============
 
 An Objective-C lightweight spatial RDBMS (based on SQLite/SpatiaLite).
-The project manages a whole stack of technologies that allow combined together to perform spatial SQL queries to obtain easy-to-use Cocoa objects.
+The project manages a whole stack of technologies that allow combined together to perform spatial SQL queries (i.e. queries based on distance, intersection between geometries etc.) to obtain easy-to-use Cocoa objects.
 
 ## Features ##
 
