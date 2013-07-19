@@ -21,11 +21,10 @@ With SpatialDBKit you will be able to:
 ```Objective-C    
     FMResultSet *rs = [db executeQuery:@"select Name, geometry FROM Regions"];
         while ([rs next]) {
-        NSLog(@"%@, %@", [resultSet stringForColumn:@"Name"], [resultSet objectForColumnName:@"geometry"]);
+        NSLog(@"%@", [resultSet resultDictionary]);
     }
+```    
     
-    // Note: don't use [resultSet resultDictionary] since it will return nil. This is tracked here: @cgus/fmdb #165
-```
 * or in textual form:
 
 ```Objective-C    
