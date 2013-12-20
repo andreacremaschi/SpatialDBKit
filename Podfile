@@ -1,3 +1,3 @@
-platform :ios
-pod 'SpatialDBKit', :path => './'
+platform :ios, '5.0'
+pod 'SpatialDBKit'
 # pod 'spatialite'
