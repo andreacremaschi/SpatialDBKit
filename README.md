@@ -4,6 +4,8 @@ SpatialDBKit
 An Objective-C lightweight spatial RDBMS (based on SQLite/SpatiaLite).
 The project manages a whole stack of technologies that allow combined together to perform spatial SQL queries (i.e. queries based on distance, intersection between geometries etc.) to obtain easy-to-use Cocoa objects.
 
+While fully working, the project is in alpha stage, please be careful using this in production projects.
+
 ## Features ##
 
 With SpatialDBKit you will be able to:
@@ -49,6 +51,13 @@ This is just the point of the iceberg.. check [spatialite SQL functions referenc
 ## How to use it ##
 
 Since importing C libraries is a sort of nightmare, SpatialDBKit has been thought to be used with [CocoaPods](http://cocoapods.org) that should address all the boring stuff for you.
+But before you must install the [GNU build system](http://en.wikipedia.org/wiki/GNU_build_system) if you haven't already:
+
+```
+brew install automake autoconf libtool
+```
+
+Now you can create your Podfile as usual: 
 
 ```
 platform :ios, '5.0'
@@ -57,8 +66,7 @@ pod 'SpatialDBKit'
 
 Of course now you should ```#import <SpatialDBKit/SpatialDatabase.h>```
 
-While fully working, the project is in alpha stage. <em>Please be sure to check that none of the dependency include other versions of sqlite</em> (i.e. -lsqlite3 in 'Other linker flags') or nothing will work!
-This issue will be fixed soon.
+
 
 ## Documentation ##
 
@@ -82,4 +90,4 @@ Since SpatialDBKit actually sits on a stack of technology, you should refer to t
  * [SQLite](http://www.sqlite.org/copyright.html) has been dedicated to the public domain by the authors (thanks!).
  * Its Objective-C wrapper, [FMDB](https://github.com/ccgus/fmdb) by Gus Mueller, is under the MIT License.
 
-**License note: Be aware that LGPL v2.1 (GEOS license) and Apple Store compatibility is at least controversial** ([Ragi Burhum's blog post](http://blog.burhum.com/post/38236943467/your-lgpl-license-is-completely-destroying-ios-adoption) explains why - I join his appeal to open up the license, anyway).
+**License note: Be aware that LGPL v2.1 (GEOS license) and Apple Store compatibility is at least controversial** (search for "LGPL iOS" on Google to know why).
