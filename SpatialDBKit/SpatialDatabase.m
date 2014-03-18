@@ -18,6 +18,7 @@
 #import <FMDB/FMResultSet.h>
 #import <FMDB/FMDatabase.h>
 #import "FMResultSet+SpatialDBKit.h"
+#import <spatialite.h>
 
 @interface FMResultSet (MyCategory)
 - (id)objectForColumnIndex:(int)columnIdx;
@@ -43,7 +44,7 @@ void Swizzle(Class c, SEL orig, SEL new)
 
 + (NSString*)spatialiteLibVersion
 {
-    return [NSString stringWithFormat:@"%d", spatialite_version()];
+    return [NSString stringWithFormat:@"%c", spatialite_version()];
 }
 
 
