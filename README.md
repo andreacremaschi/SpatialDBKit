@@ -66,6 +66,8 @@ pod 'SpatialDBKit'
 
 Of course now you should ```#import <SpatialDBKit/SpatialDatabase.h>```
 
+Now an extra step is required: rename your main file main.m to main.mm 
+The long story is that SpatialDBKit dependencies reside on C++ libraries, so we should tell the compiler that our project files should be treated as Objective-C++. The podspec correctly sets C++ Standard Library project's build setting to libstdc++ (GNU c++ standard library), but XCode 5.1 can't find any Objective-C++ file in the main project, so ignores the setting and links with libc++. Renaming a file with .mm extension does the trick.
 
 
 ## Documentation ##
