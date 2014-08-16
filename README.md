@@ -46,7 +46,7 @@ With SpatialDBKit you will be able to:
 ```
 
 
-This is just the point of the iceberg.. check [spatialite SQL functions reference list](http://www.gaia-gis.it/gaia-sins/spatialite-sql-4.1.0.html) to be sure you don't miss anything of this awesome library!
+This is just the point of the iceberg.. check [spatialite SQL functions reference list](https://www.gaia-gis.it/fossil/libspatialite/index) to be sure you don't miss anything of this awesome library!
 
 ## How to use it ##
 
