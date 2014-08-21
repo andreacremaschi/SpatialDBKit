@@ -44,7 +44,7 @@ void Swizzle(Class c, SEL orig, SEL new)
 
 + (NSString*)spatialiteLibVersion
 {
-    return [NSString stringWithFormat:@"%c", spatialite_version()];
+    return [NSString stringWithFormat:@"%s", spatialite_version()];
 }
 
 
