@@ -50,7 +50,7 @@ void Swizzle(Class c, SEL orig, SEL new)
 
 - (id)initWithPath:(NSString *)inPath
 {
-    self = [super initWithPath:(NSString *)inPath];
+    self = [super initWithPath:inPath];
     if (self)
     {
         SpatialDatabaseInstances++;
