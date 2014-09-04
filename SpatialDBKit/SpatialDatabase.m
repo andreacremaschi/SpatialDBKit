@@ -40,28 +40,59 @@ void Swizzle(Class c, SEL orig, SEL new)
         method_exchangeImplementations(origMethod, newMethod);
 }
 
-@implementation SpatialDatabase
+@implementation SpatialDatabase {
+    void *spatialite_conn;
+}
 
 + (NSString*)spatialiteLibVersion
 {
-    return [NSString stringWithFormat:@"%c", spatialite_version()];
+    return [NSString stringWithFormat:@"%s", spatialite_version()];
 }
 
 
 - (id)initWithPath:(NSString *)inPath
 {
-    self = [super initWithPath:(NSString *)inPath];
+    self = [super initWithPath:inPath];
     if (self)
     {
         SpatialDatabaseInstances++;
         if (SpatialDatabaseInstances==1)
         {
-            NSLog(@"Spatialite initialization");
-            spatialite_init(TRUE);
             Swizzle([FMResultSet class], @selector(objectForColumnIndex:), @selector(_swizzleObjectForColumnIndex:));
         }
     }
     return self;
+}
+
+- (BOOL)open
+{
+    BOOL opened = [super open];
+
+    if (opened)
+    {
+        [self initSpatialite];
+    }
+
+    return opened;
+}
+
+- (BOOL)openWithFlags:(int)flags
+{
+    BOOL opened = [super openWithFlags:flags];
+
+    if (opened)
+    {
+        [self initSpatialite];
+    }
+
+    return opened;
+}
+
+- (void)initSpatialite
+{
+    NSLog(@"Spatialite initialization");
+    spatialite_conn = spatialite_alloc_connection();
+    spatialite_init_ex(_db, spatialite_conn, 1);
 }
 
 -(void)dealloc
@@ -71,7 +102,7 @@ void Swizzle(Class c, SEL orig, SEL new)
     if (SpatialDatabaseInstances == 0)
     {
         NSLog(@"Terminating spatialite");
-        spatialite_cleanup();
+        spatialite_cleanup_ex(spatialite_conn);
     }
 }
 
