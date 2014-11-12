@@ -13,7 +13,6 @@
 // See the LICENSE file for more information.
 
 
-#import <UIKit/UIKit.h>
 #import <FMDB/FMDatabase.h>
 
 @interface SpatialDatabase : FMDatabase
