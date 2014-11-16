@@ -91,6 +91,7 @@ void Swizzle(Class c, SEL orig, SEL new)
 - (void)initSpatialite
 {
     NSLog(@"Spatialite initialization");
+    spatialite_init_geos();
     spatialite_conn = spatialite_alloc_connection();
     spatialite_init_ex(_db, spatialite_conn, 1);
 }
